@@ -1,0 +1,22 @@
+<div class="container color-dark">
+  <div class="col">
+    <p>Add the Notes</p>
+  </div>
+  <div class="col">
+    <p>Your Notes List ({{noteCount}})</p>
+  </div>
+</div>
+<div class="container color-light">
+  <div class="col">
+    <p>Use this form to add new notes. What do you want to add to your notes list?</p>
+    <form>
+      <input type="text" name="note" class="txt" placeholder="Your note...." [(ngModel)]="noteText">
+      <input type="submit" class="btn" value="Add the Note" (click)=addNote()>
+    </form>
+  </div>
+  <div class="col">
+    <p class="life-container" *ngFor="let note of notes;let i = index" (click)=removeNote(i) title="Click to remove the note">
+      {{ note }}
+    </p>
+  </div>
+</div>

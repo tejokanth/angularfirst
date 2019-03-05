@@ -1,0 +1,16 @@
+<div class="container color-dark" style="padding:.5em;font-size: 30px;font-weight: bold">IF Directive</div>
+<div class="container color-light">
+  <div class="col">
+    <p *ngIf="ifd; else elsed">
+      Hello! This is IF block, as the value selected is TRUE
+    </p>
+    <ng-template #elsed>
+      <p #elsed>
+        Hi! This is ELSE block, as the value selected is FALSE
+      </p>
+    </ng-template>
+    <p>Choose the value for IF statement block</p>
+    <button class="btn" (click)=makeTrue()>True</button>
+    <button class="btn" (click)=makeFalse()>False</button>
+  </div>
+</div>

@@ -1,0 +1,21 @@
+<div class="container color-dark" style="padding:.5em;font-size:30px;font-weight:bold">
+Switch Directive
+</div>
+<div [ngSwitch]="switchvar" class="container color-light">
+  <div *ngSwitchCase="'first'" class="col" style="margin-top:6em;margin-left:3em">This is First Case</div>
+  <div *ngSwitchCase="'second'" class="col" style="margin-top:6em;margin-left:3em">This is Second Case</div>
+  <div *ngSwitchCase="'third'" class="col" style="margin-top:6em;margin-left:3em">This is Third Case</div>
+  <div *ngSwitchCase="'fourth'" class="col" style="margin-top:6em;margin-left:3em">This is Fourth Case</div>
+  <div *ngSwitchCase="'fifth'" class="col" style="margin-top:6em;margin-left:3em">This is Fifth Case</div>
+  <div class="col" *ngSwitchDefault style="margin-top:6em;margin-left:3em">This is default Value</div>
+  <div>
+    <p>Choose any following to alter the switch condition</p>
+    <form>
+      <input type="radio" name="val" [(ngModel)]="switchvar" value='first'>First<br><br>
+      <input type="radio" name="val" [(ngModel)]="switchvar" value='second'>Second<br><br>
+      <input type="radio" name="val" [(ngModel)]="switchvar" value='third'>Third<br><br>
+      <input type="radio" name="val" [(ngModel)]="switchvar" value='fourth'>Fourth<br><br>
+      <input type="radio" name="val" [(ngModel)]="switchvar" value='fifth'>Fifth<br><br>
+    </form>
+  </div>
+</div>

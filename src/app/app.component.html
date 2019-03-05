@@ -1,0 +1,15 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<ul>
+  <li><a routerlink="">Home</a></li>
+  <li><a routerlink="about">About</a></li>
+</ul>
+<app-home></app-home>
+<br>
+<br>
+<app-ifdirect></app-ifdirect>
+<br>
+<br>
+<app-switchdirect [radvalfor]="radioVal"></app-switchdirect>
+<br>
+<br>
+<app-fordirect (radioEvent)="radioVal=$event"></app-fordirect>

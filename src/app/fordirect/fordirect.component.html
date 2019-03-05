@@ -1,0 +1,18 @@
+<div class="container color-dark" style="padding:.5em;font-size:30px;font-weight: bold">
+  FOR Directive
+</div>
+<div class="container color-light">
+  <div>
+    <p class="col">Following are the iteratives of FOR loop</p>
+    <div *ngFor="let c of colors;index as i" class="col">{{i+1}})  {{c}}</div>
+  </div>
+  <div>
+    <p class="col">Select the following value to alter the switch statement in above switch component</p>
+    <div *ngFor="let c of switchCases" class="col">
+      <input type="radio" name="colors" value="{{c}}" [(ngModel)]="radioval">{{c | titlecase}}
+    </div>
+    <div class="col">
+      <button class="btn" (click)="sendradval()">Send Value</button>
+    </div>
+  </div>
+</div>
